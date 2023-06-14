@@ -7,9 +7,7 @@ An Exiled (SCP:SL) Plugin that allows you to use your keycards without the need 
 Ported to v13.0.0 of SCP:SL and v7.0.0 of Exiled and onward by creepycats. You can find the [Original Project Here](https://github.com/SebasCapo/RemoteKeycard/)
 
 **Planned Features:**
-- Make Alpha Warhead functionality actually work
-- Further improve API (Events & Extensions)
-- ???
+- Nothing really. Just fixing Amnesia.
 
 **Known Issues:**
 - Amnesia effect cannot currently cancel card (Will fix soonTM)
