@@ -12,4 +12,4 @@ Ported to v13.0.0 of SCP:SL and v7.0.0 of Exiled and onward by creepycats. [Orig
 - ???
 
 **Known Issues:**
-- None that I know of
+- Amnesia effect cannot currently cancel card (Will fix soonTM)

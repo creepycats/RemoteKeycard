@@ -10,6 +10,8 @@ namespace RemoteKeycard.Config
     {
         /// <inheritdoc/>
         public bool IsEnabled { get; set; } = true;
+        /// <inheritdoc/>
+        public bool Debug { get; set; } = false;
 
         /// <summary>
         /// Whether Amnesia affects the usage of keycards.

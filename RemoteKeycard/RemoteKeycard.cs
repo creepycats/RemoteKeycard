@@ -21,13 +21,13 @@ namespace RemoteKeycard
         public override string Prefix => "remotekeycard";
 
         /// <inheritdoc/>
-        public override Version RequiredExiledVersion => new Version(4, 1, 0);
+        public override Version RequiredExiledVersion => new Version(7, 0, 0);
 
         /// <inheritdoc/>
-        public override string Author => "Beryl";
+        public override string Author => "Beryl + creepycats";
 
         /// <inheritdoc/>
-        public override Version Version => new Version(3, 1, 0);
+        public override Version Version => new Version(4, 0, 0);
 
         /// <inheritdoc cref="EventsHandler"/>
         public EventsHandler Handler { get; private set; }
@@ -40,10 +40,17 @@ namespace RemoteKeycard
         /// <inheritdoc/>
         public override void OnEnabled()
         {
-            Log.Debug("Initializing events...", Config.Extras.DebugMode);
+            Log.Info("Remote Keycards v" + Version + " - Original By Beryl, Ported to v13 by creepycats");
+            if (Config.Extras.DebugMode)
+            {
+                Log.Debug("Initializing events...");
+            }
             Handler = new EventsHandler(Config);
             Handler.Start();
-            Log.Debug("Events initialized successfully.", Config.Extras.DebugMode);
+            if (Config.Extras.DebugMode)
+            {
+                Log.Debug("Events initialized successfully.");
+            }
 
             base.OnEnabled();
         }
@@ -51,10 +58,15 @@ namespace RemoteKeycard
         /// <inheritdoc/>
         public override void OnDisabled()
         {
-            Log.Debug("Stopping events...", Config.Extras.DebugMode);
+            if (Config.Extras.DebugMode) {
+                Log.Debug("Stopping events...");
+            }
             Handler.Stop();
             Handler = null;
-            Log.Debug("Events stopped successfully.", Config.Extras.DebugMode);
+            if (Config.Extras.DebugMode)
+            {
+                Log.Debug("Events stopped successfully.");
+            }
 
             base.OnDisabled();
         }
